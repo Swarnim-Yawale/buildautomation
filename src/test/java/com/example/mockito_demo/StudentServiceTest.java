@@ -47,7 +47,7 @@ class StudentServiceTest {
 	void testGetStudentById() {
 
 		// Arrange
-		Student student = new Student(1L, "John", "Java");
+		Student student = new Student(1L, "John", "Java5");
 
 		when(studentRepository.findById(1L))
 				.thenReturn(Optional.of(student));
@@ -62,7 +62,7 @@ class StudentServiceTest {
 
 		assertEquals("John", result.getName());
 
-		assertEquals("Java", result.getCourse());
+		assertEquals("Java5", result.getCourse());
 
 		// Verify repository interaction
 		verify(studentRepository)
